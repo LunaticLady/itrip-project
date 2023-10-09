@@ -1,0 +1,13 @@
+server:
+  port: 2001
+
+mybatis-plus:
+  mapper-locations: classpath:/mappers/**
+
+spring:
+  # 连接信息
+  datasource:
+    url: jdbc:mysql://localhost:3306/itripdb?serverTimezone=GMT-8&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskt.mapper.ItripUserMapper">
+  <resultMap id="BaseResultMap" type="com.cskt.entity.ItripUser">
+    <!--@mbg.generated-->
+    <!--@Table itrip_user-->
+    <id column="id" property="id" />
+    <result column="user_code" property="userCode" />
+    <result column="user_password" property="userPassword" />
+    <result column="user_type" property="userType" />
+    <result column="flat_id" property="flatId" />
+    <result column="user_name" property="userName" />
+    <result column="we_chat" property="weChat" />
+    <result column="qq" property="qq" />
+    <result column="weibo" property="weibo" />
+    <result column="baidu" property="baidu" />
+    <result column="creation_date" property="creationDate" />
+    <result column="created_by" property="createdBy" />
+    <result column="modify_date" property="modifyDate" />
+    <result column="modified_by" property="modifiedBy" />
+    <result column="activated" property="activated" />
+    <result column="is_deleted" property="isDeleted" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, user_code, user_password, user_type, flat_id, user_name, we_chat, qq, weibo, 
+    baidu, creation_date, created_by, modify_date, modified_by, activated, is_deleted
+  </sql>
+</mapper>

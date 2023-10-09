@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskt.mapper.ItripHotelOrderMapper">
+  <resultMap id="BaseResultMap" type="com.cskt.entity.ItripHotelOrder">
+    <!--@mbg.generated-->
+    <!--@Table itrip_hotel_order-->
+    <id column="id" property="id" />
+    <result column="user_id" property="userId" />
+    <result column="order_type" property="orderType" />
+    <result column="order_no" property="orderNo" />
+    <result column="trade_no" property="tradeNo" />
+    <result column="hotel_id" property="hotelId" />
+    <result column="hotel_name" property="hotelName" />
+    <result column="room_id" property="roomId" />
+    <result column="count" property="count" />
+    <result column="booking_days" property="bookingDays" />
+    <result column="check_in_date" property="checkInDate" />
+    <result column="check_out_date" property="checkOutDate" />
+    <result column="order_status" property="orderStatus" />
+    <result column="pay_amount" property="payAmount" />
+    <result column="pay_type" property="payType" />
+    <result column="notice_phone" property="noticePhone" />
+    <result column="notice_email" property="noticeEmail" />
+    <result column="special_requirement" property="specialRequirement" />
+    <result column="is_need_invoice" property="isNeedInvoice" />
+    <result column="invoice_type" property="invoiceType" />
+    <result column="invoice_head" property="invoiceHead" />
+    <result column="link_user_name" property="linkUserName" />
+    <result column="book_type" property="bookType" />
+    <result column="creation_date" property="creationDate" />
+    <result column="created_by" property="createdBy" />
+    <result column="modify_date" property="modifyDate" />
+    <result column="modified_by" property="modifiedBy" />
+    <result column="is_deleted" property="isDeleted" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, user_id, order_type, order_no, trade_no, hotel_id, hotel_name, room_id, `count`, 
+    booking_days, check_in_date, check_out_date, order_status, pay_amount, pay_type, 
+    notice_phone, notice_email, special_requirement, is_need_invoice, invoice_type, invoice_head, 
+    link_user_name, book_type, creation_date, created_by, modify_date, modified_by, is_deleted
+  </sql>
+</mapper>
