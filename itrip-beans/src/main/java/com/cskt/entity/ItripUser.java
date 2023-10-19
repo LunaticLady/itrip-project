@@ -1,18 +1,17 @@
 package com.cskt.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
-    * 用户表
-    */
+ * 用户表
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -78,13 +77,13 @@ public class ItripUser implements Serializable {
     @TableField(value = "baidu")
     private String baidu;
 
-    @TableField(value = "creation_date")
+    @TableField(value = "creation_date", fill = FieldFill.INSERT)
     private Date creationDate;
 
     @TableField(value = "created_by")
     private Long createdBy;
 
-    @TableField(value = "modify_date")
+    @TableField(value = "modify_date", fill = FieldFill.INSERT_UPDATE)
     private Date modifyDate;
 
     @TableField(value = "modified_by")
@@ -100,7 +99,8 @@ public class ItripUser implements Serializable {
      * 逻辑删除
      */
     @TableField(value = "is_deleted")
-    private Integer isDeleted;
+    @TableLogic
+    private Integer deleted;
 
-    private static final long serialVersionUID = 1L;
+
 }

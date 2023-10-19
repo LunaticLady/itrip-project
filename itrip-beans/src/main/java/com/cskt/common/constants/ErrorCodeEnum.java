@@ -1,6 +1,5 @@
 package com.cskt.common.constants;
 
-import sun.security.util.Password;
 /**
  * 错误码枚举
  */
@@ -19,6 +18,7 @@ public enum ErrorCodeEnum {
     AUTH_LOGOUT_SUCCESS("30009", "退出成功"),
     AUTH_NOT_LOGIN("30010", "用户未登录"),
     AUTH_PARAMETER_IS_EMPTY("30011", "参数为空"),
+    AUTH_TOKEN_IS_EMPTY("30012","token为空"),
     /*后台*/
     SYSTEM_EXECUTION_ERROR("B0001", "系统执行出错"),
     SYSTEM_EXECUTION_TIMEOUT("B0100", "系统执行超时"),
@@ -36,6 +36,7 @@ public enum ErrorCodeEnum {
     MESSAGE_GROUP_NOT_FOUND("C0124", "消息分组未查到"),
     CACHE_SERVICE_ERROR("C0130", "缓存服务出错"),
     BIZ_DATA_NULL("10000", "数据为空"),
+    FAIL_UMS_SMS_CODE_PAST("20001", "短信验证码发送频繁"),
     ;
     private String errorCode;
     private String msg;

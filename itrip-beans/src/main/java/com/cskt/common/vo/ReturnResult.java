@@ -1,24 +1,18 @@
 package com.cskt.common.vo;
 
 import com.cskt.common.constants.ErrorCodeEnum;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
+/**
+ * 统一的响应对象
+ */
 @Data
-@ApiModel(value = "统一的响应对象")
+
 public class ReturnResult {
     private static final long serialVersionUID = 4849087550620538822L;
-    @ApiModelProperty(value = "是否成功标示，true：成功；false：失败")
-    private String success;
-    @ApiModelProperty(value = "异常码")
-    private String errorCode;
-    @ApiModelProperty(value = "响应提示信息")
-    private String msg;
-    @ApiModelProperty(value = "响应数据")
-    private Object data;
+    private String success; //是否成功标示，true：成功；false：失败
+    private String errorCode; //异常码
+    private String msg; //响应提示信息
+    private Object data; //响应数据
 
     /**
      * 正常响应

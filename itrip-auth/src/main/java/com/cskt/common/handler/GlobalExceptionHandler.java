@@ -7,8 +7,6 @@ import com.cskt.common.exception.SysException;
 import com.cskt.common.vo.ReturnResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.MissingServletRequestParameterException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -49,6 +47,12 @@ public class GlobalExceptionHandler {
         LOGGER.error(e.getMessage(), e);
         return ReturnResult.error(e.getErrorCode(),e.getMessage());
     }
+
+    /**
+     * 捕获异常
+     * @param e 异常类型为SysException
+     * @return
+     */
     @ExceptionHandler(value = SysException.class)
     public ReturnResult error(SysException e) {
         LOGGER.error(e.getMessage(), e);

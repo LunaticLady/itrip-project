@@ -1,18 +1,17 @@
 package com.cskt.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
-    * 实时库存表
-    */
+ * 实时库存表
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -58,7 +57,8 @@ public class ItripHotelTempStore implements Serializable {
      * 逻辑删除（0:未删除；1：删除）
      */
     @TableField(value = "is_deleted")
-    private Integer isDeleted;
+    @TableLogic
+    private Integer deleted;
 
-    private static final long serialVersionUID = 1L;
+
 }

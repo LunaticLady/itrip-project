@@ -7,7 +7,7 @@
     <id column="id" property="id" />
     <result column="order_no" property="orderNo" />
     <result column="flag" property="flag" />
-    <result column="is_deleted" property="isDeleted" />
+    <result column="is_deleted" property="deleted" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->

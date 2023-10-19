@@ -1,0 +1,55 @@
+server:
+  port: 8801
+  servlet:
+    context-path: /auth
+
+spring:
+  datasource: #连接信息
+    url: jdbc:mysql://localhost:3306/itrip?serverTimezone=GMT-8&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis: #redis配置
+    database: 1
+  jackson: #返回json的全局时间格式
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # 配置邮件发送基本信息
+  mail:
+    #配置smtp服务主机地址
+    # qq邮箱为smtp.qq.com          端口号465或587
+    # sina    smtp.sina.cn
+    # aliyun  smtp.aliyun.com
+    # 163     smtp.163.com       端口号465或994
+    host: smtp.qq.com
+    #发送者邮箱
+    username: 1936387425@qq.com
+    #配置密码,注意不是真正的密码，而是申请的授权码
+    password: mnabddruelrwdbjf
+    #端口号465或587
+    port: 587
+    #默认的邮件编码为UTF-8
+    default-encoding: UTF-8
+    #其他参数
+    properties:
+      mail:
+        #配置SSL 加密工厂
+        smtp:
+          ssl:
+            #本地测试，先放开ssl
+            enable: false
+            required: false
+          #开启debug模式，这样邮件发送过程的日志会在控制台打印出来，方便排查错误
+        debug: true
+
+enable:
+  send:
+    email: true #是否开启邮件发送
+    sms: true #是否开启验证码发送
+
+#设置日志级别
+logging:
+  level:
+    root: info
+
+

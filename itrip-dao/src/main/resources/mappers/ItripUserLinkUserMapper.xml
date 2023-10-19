@@ -13,7 +13,7 @@
     <result column="created_by" property="createdBy" />
     <result column="modify_date" property="modifyDate" />
     <result column="modified_by" property="modifiedBy" />
-    <result column="is_deleted" property="isDeleted" />
+    <result column="is_deleted" property="deleted" />
     <result column="link_id_card_type" property="linkIdCardType" />
   </resultMap>
   <sql id="Base_Column_List">

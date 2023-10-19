@@ -18,10 +18,12 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>com.cskt</groupId>
             <artifactId>itrip-beans</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>
